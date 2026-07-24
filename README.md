@@ -2,26 +2,17 @@
 
 ## Project Overview
 
-This project is my submission for **Week 1 of the HUG Lagos/Ibadan Terraform Challenge**.
+This project provisions a fully functional Nginx web server on AWS using Terraform. It demonstrates Infrastructure as Code (IaC) concepts such as network provisioning, security configuration, automated server bootstrapping, and resource dependency management.
 
-The objective was to provision a basic web server on AWS using Terraform while applying Infrastructure as Code (IaC) principles.
-
-The infrastructure provisions a custom VPC, public subnet, internet gateway, route table, security group, and an EC2 instance. During deployment, the EC2 instance automatically installs Nginx using a `user_data` script and serves a simple HTML page displaying my name and **"HUG Lagos/Ibadan Terraform Challenge."**
+The project was implemented as part of **Week 1 of the HUG Lagos/Ibadan Terraform Challenge**.
 
 ---
 
 ## Architecture
 
-The infrastructure consists of:
+The diagram below illustrates the AWS infrastructure provisioned using Terraform.
 
-- Custom VPC
-- Public Subnet
-- Internet Gateway
-- Route Table
-- Route Table Association
-- Security Group (SSH & HTTP)
-- EC2 Instance
-- Nginx Web Server
+![AWS Infrastructure Architecture](images/architecture.png)
 
 ---
 
@@ -38,7 +29,11 @@ The infrastructure consists of:
 ## Project Structure
 
 ```text
-.
+terraform-webserver/
+├── images/
+│   ├── architecture.png
+│   ├── ec2-running.png
+│   └── webpage.png
 ├── main.tf
 ├── outputs.tf
 ├── userdata.sh
@@ -47,7 +42,8 @@ The infrastructure consists of:
 └── .terraform.lock.hcl
 ```
 
----
+
+
 
 ## Resources Provisioned
 
